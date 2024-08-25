@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Договор</title>
+</head>
+<body>
+<t>ID договора:</t> <p th:text ="${contract.getId()}">VALUE</p>
+<br/>
+<br/>
+<t>Описание договора:</t> <p th:text ="${contract.getDescription()}">VALUE</p>
+<br/>
+<br/>
+<t>Участники договора:</t><p th:text ="${contract.getMemberList()}">VALUE</p>
+<br/>
+<br/>
+<t>Дата начала обязательств:</t><p th:text ="${contract.getBeginning()}">VALUE</p>
+<br/>
+<br/>
+<t>Дата окончания обязательств:</t><p th:text ="${contract.getEnding()}">VALUE</p>
+<br/>
+<br/>
+<t>Дата создания документа:</t><p th:text ="${contract.getCreationDate()}">VALUE</p>
+<br/>
+<br/>
+<t>ID сотрудника, составившего договор:</t><p th:text ="${contract.getCreatorName()}">VALUE</p>
+<br/>
+<br/>
+<t>Состояние данного договора:</t><p th:text ="${contractStatus}">VALUE</p>
+<br/>
+<br/>
+<a href="/contracts">Вернуться на главную страницу.</a><br/>
+</body>
+</html>

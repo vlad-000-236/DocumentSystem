@@ -1,0 +1,5 @@
+FROM openjdk:17-jdk-slim-buster
+WORKDIR /app
+COPY /out/artifacts/DocumentSystem_jar/DocumentSystem.jar /app/dockSys.jar
+EXPOSE 8181
+ENTRYPOINT ["java", "-jar", "dockSys.jar"]

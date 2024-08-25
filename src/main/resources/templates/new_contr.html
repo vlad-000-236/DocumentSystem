@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание договора</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/contracts}" th:object="${contract}">
+
+    <label for="description">Введите описание договора: </label>
+    <input type="text" th:field="*{description}" id="description"/>
+    <br/>
+    <label for="memberList">Введите участников договора через запятую: </label>
+    <input type="text" th:field="*{memberList}" id="memberList"/>
+    <br/>
+    <label for="beginning">Введите дату начала обязательств (в формате дд:мм:гг; прим.: 10.12.2020): </label>
+    <input type="text" th:field="*{beginning}" id="beginning"/>
+    <br/>
+    <label for="ending">Введите дату окончания обязательств (в формате дд:мм:гг; прим.: 10.12.2020): </label>
+    <input type="text" th:field="*{ending}" id="ending"/>
+    <br/>
+    <label for="creatorName">Введите ID сотрудника, создавшего документ: </label>
+    <input type="text" th:field="*{creatorName}" id="creatorName"/>
+    <br/>
+    <input type="submit" value="Создать." />
+
+</form>
+
+</body>
+</html>
